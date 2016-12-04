@@ -1,19 +1,16 @@
-//
-// Created by noble on 29/11/2016.
-//
-
 #ifndef PROGRAMMAESAME_PLAYER_H
 #define PROGRAMMAESAME_PLAYER_H
+
 #include "Character.h"
 #include "Item.h"
 #include "Bullets.h"
 
 
-class Player :  public Character {
+class Player : public Character {
 
 public:
 
-    Player(float x, float y, float speed, int size, bool invincible, bool fire, bool bullet, Item *item= NULL) :
+    Player(float x, float y, float speed, int size, bool invincible, bool fire, bool bullet, Item *item = NULL) :
             Character(x, y, speed), invincible(invincible), fire(fire), bullet(bullet), item(item) {
     }
 
@@ -23,7 +20,7 @@ public:
         Player::size = size;
     }
 
-    int getSize(){
+    int getSize() {
         return size;
     }
 
@@ -35,32 +32,37 @@ public:
         Player::invincible = invincible;//false
     }
 
-    void setFire(bool fire){
+    void setFire(bool fire) {
         Player::fire = fire;
     }
 
-    bool getFire(){
+    bool getFire() {
         return fire;
     }
 
-    bool pickItem(bool donut, bool pepper, bool coffee){
+    bool pickItem(bool donut, bool pepper, bool coffee) {
         bool Pickupped = false;
-      if (donut){
-          size = 2;
-          bullet = true;
-          Pickupped=true;
-      }
+
+        if (donut) {
+            size = 2;
+            bullet = true;
+            Pickupped = true;
+        }
 
         if (pepper) {
-          invincible = true;
-          fire = true;
-      }
+            invincible = true;
+            fire = true;
+            Pickupped = true;
+        }
 
-      if (coffee)
-          speed *= 2;
+        if (coffee) {
+            speed *= 2;
+            Pickupped = true;
+        }
+        return Pickupped;
     }
 
-    float Jump(float x, float y ){
+    float Jump(float x, float y) {
 // TODO salto
     }
 
