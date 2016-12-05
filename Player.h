@@ -10,8 +10,8 @@ class Player : public Character {
 
 public:
 
-    Player(float x, float y, float speed, int size, bool invincible, bool fire, bool bullet, Item *item = NULL) :
-            Character(x, y, speed), invincible(invincible), fire(fire), bullet(bullet), item(item) {
+    Player(float x, float y, float speed, int size, bool invincible, bool fire, bool bullet):
+            Character(x, y, speed), invincible(invincible), fire(fire), bullet(bullet) {
     }
 
     virtual ~Player() {};
@@ -29,7 +29,7 @@ public:
     }
 
     void setInvincible(bool invincible) {
-        Player::invincible = invincible;//false
+        Player::invincible = invincible;
     }
 
     void setFire(bool fire) {
@@ -38,6 +38,14 @@ public:
 
     bool getFire() {
         return fire;
+    }
+
+    bool CouldBullet() const {
+        return bullet;
+    }
+
+    void setBullet(bool bullet) {
+        Player::bullet = bullet;
     }
 
     bool pickItem(bool donut, bool pepper, bool coffee) {
@@ -62,8 +70,8 @@ public:
         return Pickupped;
     }
 
-    float Jump(float x, float y) {
-// TODO salto
+    void Jump(float x, float y) {
+        //TODO JUMP
     }
 
 protected:
@@ -71,7 +79,7 @@ protected:
     bool invincible;
     bool fire;
     bool bullet;
-    Item *item;
+
 
 };
 

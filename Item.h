@@ -1,13 +1,14 @@
-//
-// Created by noble on 29/11/2016.
-//
-
 #ifndef PROGRAMMAESAME_ITEM_H
 #define PROGRAMMAESAME_ITEM_H
-#include <SFML/Graphics.hpp>
+
 
 class Item {
 public:
+
+    Item(bool don=false, bool pep=false, bool cof=false): donut(don), pepper(pep), coffee(cof){}
+
+    ~Item(){}
+
     void setDonut(bool donut) {
         Item::donut = donut;
     }

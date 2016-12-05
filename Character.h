@@ -10,7 +10,6 @@
 class Character {
 
 public:
-    Character();
     Character(float x, float y, float speed);
 
     virtual void move(float x, float y);

@@ -5,7 +5,7 @@
 		<Option title="programmaesame"/>
 		<Option makefile_is_custom="1"/>
 		<Option compiler="gcc"/>
-		<Option virtualFolders="CMake Files\;"/>
+		<Option virtualFolders="CMake Files\;CMake Files\test\;CMake Files\test\lib\;CMake Files\test\lib\googletest\;CMake Files\test\lib\googletest\cmake\;"/>
 		<Build>
 			<Target title="all">
 				<Option working_dir="/home/giulia/Scrivania/programmaesame1/cmake-build-debug"/>
@@ -32,6 +32,46 @@
 				<Option type="4"/>
 				<MakeCommands>
 					<Build command="/usr/bin/make -j2 -f &quot;/home/giulia/Scrivania/programmaesame1/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j2 -f &quot;/home/giulia/Scrivania/programmaesame1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j2 -f &quot;/home/giulia/Scrivania/programmaesame1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j2 -f &quot;/home/giulia/Scrivania/programmaesame1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="list_install_components">
+				<Option working_dir="/home/giulia/Scrivania/programmaesame1/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j2 -f &quot;/home/giulia/Scrivania/programmaesame1/cmake-build-debug/Makefile&quot;  VERBOSE=1 list_install_components"/>
+					<CompileFile command="/usr/bin/make -j2 -f &quot;/home/giulia/Scrivania/programmaesame1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j2 -f &quot;/home/giulia/Scrivania/programmaesame1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j2 -f &quot;/home/giulia/Scrivania/programmaesame1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="install">
+				<Option working_dir="/home/giulia/Scrivania/programmaesame1/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j2 -f &quot;/home/giulia/Scrivania/programmaesame1/cmake-build-debug/Makefile&quot;  VERBOSE=1 install"/>
+					<CompileFile command="/usr/bin/make -j2 -f &quot;/home/giulia/Scrivania/programmaesame1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j2 -f &quot;/home/giulia/Scrivania/programmaesame1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j2 -f &quot;/home/giulia/Scrivania/programmaesame1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="install/local">
+				<Option working_dir="/home/giulia/Scrivania/programmaesame1/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j2 -f &quot;/home/giulia/Scrivania/programmaesame1/cmake-build-debug/Makefile&quot;  VERBOSE=1 install/local"/>
+					<CompileFile command="/usr/bin/make -j2 -f &quot;/home/giulia/Scrivania/programmaesame1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j2 -f &quot;/home/giulia/Scrivania/programmaesame1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j2 -f &quot;/home/giulia/Scrivania/programmaesame1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="install/strip">
+				<Option working_dir="/home/giulia/Scrivania/programmaesame1/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j2 -f &quot;/home/giulia/Scrivania/programmaesame1/cmake-build-debug/Makefile&quot;  VERBOSE=1 install/strip"/>
 					<CompileFile command="/usr/bin/make -j2 -f &quot;/home/giulia/Scrivania/programmaesame1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j2 -f &quot;/home/giulia/Scrivania/programmaesame1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j2 -f &quot;/home/giulia/Scrivania/programmaesame1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
@@ -83,48 +123,186 @@
 					<DistClean command="/usr/bin/make -j2 -f &quot;/home/giulia/Scrivania/programmaesame1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
+			<Target title="runAllTests">
+				<Option output="/home/giulia/Scrivania/programmaesame1/cmake-build-debug/test/runAllTests" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/giulia/Scrivania/programmaesame1/cmake-build-debug/test"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/giulia/Scrivania/programmaesame1/test/lib/googletest/include"/>
+					<Add directory="/home/giulia/Scrivania/programmaesame1/test/lib/googletest"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j2 -f &quot;/home/giulia/Scrivania/programmaesame1/cmake-build-debug/test/Makefile&quot;  VERBOSE=1 runAllTests"/>
+					<CompileFile command="/usr/bin/make -j2 -f &quot;/home/giulia/Scrivania/programmaesame1/cmake-build-debug/test/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j2 -f &quot;/home/giulia/Scrivania/programmaesame1/cmake-build-debug/test/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j2 -f &quot;/home/giulia/Scrivania/programmaesame1/cmake-build-debug/test/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="runAllTests/fast">
+				<Option output="/home/giulia/Scrivania/programmaesame1/cmake-build-debug/test/runAllTests" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/giulia/Scrivania/programmaesame1/cmake-build-debug/test"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/giulia/Scrivania/programmaesame1/test/lib/googletest/include"/>
+					<Add directory="/home/giulia/Scrivania/programmaesame1/test/lib/googletest"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j2 -f &quot;/home/giulia/Scrivania/programmaesame1/cmake-build-debug/test/Makefile&quot;  VERBOSE=1 runAllTests/fast"/>
+					<CompileFile command="/usr/bin/make -j2 -f &quot;/home/giulia/Scrivania/programmaesame1/cmake-build-debug/test/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j2 -f &quot;/home/giulia/Scrivania/programmaesame1/cmake-build-debug/test/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j2 -f &quot;/home/giulia/Scrivania/programmaesame1/cmake-build-debug/test/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="gtest_main">
+				<Option output="/home/giulia/Scrivania/programmaesame1/cmake-build-debug/test/lib/googletest/libgtest_main.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/giulia/Scrivania/programmaesame1/cmake-build-debug/test/lib/googletest"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/giulia/Scrivania/programmaesame1/test/lib/googletest/include"/>
+					<Add directory="/home/giulia/Scrivania/programmaesame1/test/lib/googletest"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j2 -f &quot;/home/giulia/Scrivania/programmaesame1/cmake-build-debug/test/lib/googletest/Makefile&quot;  VERBOSE=1 gtest_main"/>
+					<CompileFile command="/usr/bin/make -j2 -f &quot;/home/giulia/Scrivania/programmaesame1/cmake-build-debug/test/lib/googletest/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j2 -f &quot;/home/giulia/Scrivania/programmaesame1/cmake-build-debug/test/lib/googletest/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j2 -f &quot;/home/giulia/Scrivania/programmaesame1/cmake-build-debug/test/lib/googletest/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="gtest_main/fast">
+				<Option output="/home/giulia/Scrivania/programmaesame1/cmake-build-debug/test/lib/googletest/libgtest_main.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/giulia/Scrivania/programmaesame1/cmake-build-debug/test/lib/googletest"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/giulia/Scrivania/programmaesame1/test/lib/googletest/include"/>
+					<Add directory="/home/giulia/Scrivania/programmaesame1/test/lib/googletest"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j2 -f &quot;/home/giulia/Scrivania/programmaesame1/cmake-build-debug/test/lib/googletest/Makefile&quot;  VERBOSE=1 gtest_main/fast"/>
+					<CompileFile command="/usr/bin/make -j2 -f &quot;/home/giulia/Scrivania/programmaesame1/cmake-build-debug/test/lib/googletest/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j2 -f &quot;/home/giulia/Scrivania/programmaesame1/cmake-build-debug/test/lib/googletest/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j2 -f &quot;/home/giulia/Scrivania/programmaesame1/cmake-build-debug/test/lib/googletest/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="gtest">
+				<Option output="/home/giulia/Scrivania/programmaesame1/cmake-build-debug/test/lib/googletest/libgtest.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/giulia/Scrivania/programmaesame1/cmake-build-debug/test/lib/googletest"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/giulia/Scrivania/programmaesame1/test/lib/googletest/include"/>
+					<Add directory="/home/giulia/Scrivania/programmaesame1/test/lib/googletest"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j2 -f &quot;/home/giulia/Scrivania/programmaesame1/cmake-build-debug/test/lib/googletest/Makefile&quot;  VERBOSE=1 gtest"/>
+					<CompileFile command="/usr/bin/make -j2 -f &quot;/home/giulia/Scrivania/programmaesame1/cmake-build-debug/test/lib/googletest/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j2 -f &quot;/home/giulia/Scrivania/programmaesame1/cmake-build-debug/test/lib/googletest/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j2 -f &quot;/home/giulia/Scrivania/programmaesame1/cmake-build-debug/test/lib/googletest/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="gtest/fast">
+				<Option output="/home/giulia/Scrivania/programmaesame1/cmake-build-debug/test/lib/googletest/libgtest.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/giulia/Scrivania/programmaesame1/cmake-build-debug/test/lib/googletest"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/giulia/Scrivania/programmaesame1/test/lib/googletest/include"/>
+					<Add directory="/home/giulia/Scrivania/programmaesame1/test/lib/googletest"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j2 -f &quot;/home/giulia/Scrivania/programmaesame1/cmake-build-debug/test/lib/googletest/Makefile&quot;  VERBOSE=1 gtest/fast"/>
+					<CompileFile command="/usr/bin/make -j2 -f &quot;/home/giulia/Scrivania/programmaesame1/cmake-build-debug/test/lib/googletest/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j2 -f &quot;/home/giulia/Scrivania/programmaesame1/cmake-build-debug/test/lib/googletest/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j2 -f &quot;/home/giulia/Scrivania/programmaesame1/cmake-build-debug/test/lib/googletest/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
 		</Build>
-		<Unit filename="/home/giulia/Scrivania/programmaesame1/Block.cpp">
-			<Option target="programmaesame"/>
+		<Unit filename="/home/giulia/Scrivania/programmaesame1/test/PlayerTest.cpp">
+			<Option target="runAllTests"/>
 		</Unit>
-		<Unit filename="/home/giulia/Scrivania/programmaesame1/Block.h">
-			<Option target="programmaesame"/>
+		<Unit filename="/home/giulia/Scrivania/programmaesame1/test/lib/googletest/src/gtest-all.cc">
+			<Option target="gtest"/>
 		</Unit>
-		<Unit filename="/home/giulia/Scrivania/programmaesame1/Bullets.cpp">
-			<Option target="programmaesame"/>
+		<Unit filename="/home/giulia/Scrivania/programmaesame1/test/lib/googletest/src/gtest_main.cc">
+			<Option target="gtest_main"/>
 		</Unit>
-		<Unit filename="/home/giulia/Scrivania/programmaesame1/Bullets.h">
-			<Option target="programmaesame"/>
-		</Unit>
-		<Unit filename="/home/giulia/Scrivania/programmaesame1/Character.cpp">
-			<Option target="programmaesame"/>
-		</Unit>
-		<Unit filename="/home/giulia/Scrivania/programmaesame1/Character.h">
-			<Option target="programmaesame"/>
-		</Unit>
-		<Unit filename="/home/giulia/Scrivania/programmaesame1/Enemy.cpp">
-			<Option target="programmaesame"/>
-		</Unit>
-		<Unit filename="/home/giulia/Scrivania/programmaesame1/Enemy.h">
-			<Option target="programmaesame"/>
-		</Unit>
-		<Unit filename="/home/giulia/Scrivania/programmaesame1/Item.cpp">
-			<Option target="programmaesame"/>
-		</Unit>
-		<Unit filename="/home/giulia/Scrivania/programmaesame1/Item.h">
-			<Option target="programmaesame"/>
-		</Unit>
-		<Unit filename="/home/giulia/Scrivania/programmaesame1/Player.cpp">
-			<Option target="programmaesame"/>
-		</Unit>
-		<Unit filename="/home/giulia/Scrivania/programmaesame1/Player.h">
-			<Option target="programmaesame"/>
-		</Unit>
-		<Unit filename="/home/giulia/Scrivania/programmaesame1/main.cpp">
-			<Option target="programmaesame"/>
+		<Unit filename="/home/giulia/Scrivania/programmaesame1/test/runAllTests.cpp">
+			<Option target="runAllTests"/>
 		</Unit>
 		<Unit filename="/home/giulia/Scrivania/programmaesame1/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/home/giulia/Scrivania/programmaesame1/test/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\test\"/>
+		</Unit>
+		<Unit filename="/home/giulia/Scrivania/programmaesame1/test/lib/googletest/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\test\lib\googletest\"/>
+		</Unit>
+		<Unit filename="/home/giulia/Scrivania/programmaesame1/test/lib/googletest/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\test\lib\googletest\"/>
+		</Unit>
+		<Unit filename="/home/giulia/Scrivania/programmaesame1/test/lib/googletest/cmake/internal_utils.cmake">
+			<Option virtualFolder="CMake Files\test\lib\googletest\cmake\"/>
+		</Unit>
+		<Unit filename="/home/giulia/Scrivania/programmaesame1/test/lib/googletest/cmake/internal_utils.cmake">
+			<Option virtualFolder="CMake Files\test\lib\googletest\cmake\"/>
 		</Unit>
 	</Project>
 </CodeBlocks_project_file>

@@ -78,6 +78,50 @@ rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
 
+# Special rule for the target list_install_components
+list_install_components:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
+.PHONY : list_install_components
+
+# Special rule for the target list_install_components
+list_install_components/fast: list_install_components
+
+.PHONY : list_install_components/fast
+
+# Special rule for the target install
+install: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/home/giulia/clion-2016.3/bin/cmake/bin/cmake -P cmake_install.cmake
+.PHONY : install
+
+# Special rule for the target install
+install/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/home/giulia/clion-2016.3/bin/cmake/bin/cmake -P cmake_install.cmake
+.PHONY : install/fast
+
+# Special rule for the target install/local
+install/local: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/home/giulia/clion-2016.3/bin/cmake/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local
+
+# Special rule for the target install/local
+install/local/fast: install/local
+
+.PHONY : install/local/fast
+
+# Special rule for the target install/strip
+install/strip: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/home/giulia/clion-2016.3/bin/cmake/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip
+
+# Special rule for the target install/strip
+install/strip/fast: install/strip
+
+.PHONY : install/strip/fast
+
 # The main all target
 all: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/giulia/Scrivania/programmaesame1/cmake-build-debug/CMakeFiles /home/giulia/Scrivania/programmaesame1/cmake-build-debug/CMakeFiles/progress.marks
@@ -111,17 +155,56 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named programmaesame
+# Target rules for targets named programmaesame1
 
 # Build rule for target.
-programmaesame: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 programmaesame
-.PHONY : programmaesame
+programmaesame1: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 programmaesame1
+.PHONY : programmaesame1
 
 # fast build rule for target.
-programmaesame/fast:
-	$(MAKE) -f CMakeFiles/programmaesame.dir/build.make CMakeFiles/programmaesame.dir/build
-.PHONY : programmaesame/fast
+programmaesame1/fast:
+	$(MAKE) -f CMakeFiles/programmaesame1.dir/build.make CMakeFiles/programmaesame1.dir/build
+.PHONY : programmaesame1/fast
+
+#=============================================================================
+# Target rules for targets named runAllTests
+
+# Build rule for target.
+runAllTests: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 runAllTests
+.PHONY : runAllTests
+
+# fast build rule for target.
+runAllTests/fast:
+	$(MAKE) -f test/CMakeFiles/runAllTests.dir/build.make test/CMakeFiles/runAllTests.dir/build
+.PHONY : runAllTests/fast
+
+#=============================================================================
+# Target rules for targets named gtest_main
+
+# Build rule for target.
+gtest_main: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 gtest_main
+.PHONY : gtest_main
+
+# fast build rule for target.
+gtest_main/fast:
+	$(MAKE) -f test/lib/googletest/CMakeFiles/gtest_main.dir/build.make test/lib/googletest/CMakeFiles/gtest_main.dir/build
+.PHONY : gtest_main/fast
+
+#=============================================================================
+# Target rules for targets named gtest
+
+# Build rule for target.
+gtest: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 gtest
+.PHONY : gtest
+
+# fast build rule for target.
+gtest/fast:
+	$(MAKE) -f test/lib/googletest/CMakeFiles/gtest.dir/build.make test/lib/googletest/CMakeFiles/gtest.dir/build
+.PHONY : gtest/fast
 
 Block.o: Block.cpp.o
 
@@ -129,7 +212,7 @@ Block.o: Block.cpp.o
 
 # target to build an object file
 Block.cpp.o:
-	$(MAKE) -f CMakeFiles/programmaesame.dir/build.make CMakeFiles/programmaesame.dir/Block.cpp.o
+	$(MAKE) -f CMakeFiles/programmaesame1.dir/build.make CMakeFiles/programmaesame1.dir/Block.cpp.o
 .PHONY : Block.cpp.o
 
 Block.i: Block.cpp.i
@@ -138,7 +221,7 @@ Block.i: Block.cpp.i
 
 # target to preprocess a source file
 Block.cpp.i:
-	$(MAKE) -f CMakeFiles/programmaesame.dir/build.make CMakeFiles/programmaesame.dir/Block.cpp.i
+	$(MAKE) -f CMakeFiles/programmaesame1.dir/build.make CMakeFiles/programmaesame1.dir/Block.cpp.i
 .PHONY : Block.cpp.i
 
 Block.s: Block.cpp.s
@@ -147,7 +230,7 @@ Block.s: Block.cpp.s
 
 # target to generate assembly for a file
 Block.cpp.s:
-	$(MAKE) -f CMakeFiles/programmaesame.dir/build.make CMakeFiles/programmaesame.dir/Block.cpp.s
+	$(MAKE) -f CMakeFiles/programmaesame1.dir/build.make CMakeFiles/programmaesame1.dir/Block.cpp.s
 .PHONY : Block.cpp.s
 
 Bullets.o: Bullets.cpp.o
@@ -156,7 +239,7 @@ Bullets.o: Bullets.cpp.o
 
 # target to build an object file
 Bullets.cpp.o:
-	$(MAKE) -f CMakeFiles/programmaesame.dir/build.make CMakeFiles/programmaesame.dir/Bullets.cpp.o
+	$(MAKE) -f CMakeFiles/programmaesame1.dir/build.make CMakeFiles/programmaesame1.dir/Bullets.cpp.o
 .PHONY : Bullets.cpp.o
 
 Bullets.i: Bullets.cpp.i
@@ -165,7 +248,7 @@ Bullets.i: Bullets.cpp.i
 
 # target to preprocess a source file
 Bullets.cpp.i:
-	$(MAKE) -f CMakeFiles/programmaesame.dir/build.make CMakeFiles/programmaesame.dir/Bullets.cpp.i
+	$(MAKE) -f CMakeFiles/programmaesame1.dir/build.make CMakeFiles/programmaesame1.dir/Bullets.cpp.i
 .PHONY : Bullets.cpp.i
 
 Bullets.s: Bullets.cpp.s
@@ -174,7 +257,7 @@ Bullets.s: Bullets.cpp.s
 
 # target to generate assembly for a file
 Bullets.cpp.s:
-	$(MAKE) -f CMakeFiles/programmaesame.dir/build.make CMakeFiles/programmaesame.dir/Bullets.cpp.s
+	$(MAKE) -f CMakeFiles/programmaesame1.dir/build.make CMakeFiles/programmaesame1.dir/Bullets.cpp.s
 .PHONY : Bullets.cpp.s
 
 Character.o: Character.cpp.o
@@ -183,7 +266,7 @@ Character.o: Character.cpp.o
 
 # target to build an object file
 Character.cpp.o:
-	$(MAKE) -f CMakeFiles/programmaesame.dir/build.make CMakeFiles/programmaesame.dir/Character.cpp.o
+	$(MAKE) -f CMakeFiles/programmaesame1.dir/build.make CMakeFiles/programmaesame1.dir/Character.cpp.o
 .PHONY : Character.cpp.o
 
 Character.i: Character.cpp.i
@@ -192,7 +275,7 @@ Character.i: Character.cpp.i
 
 # target to preprocess a source file
 Character.cpp.i:
-	$(MAKE) -f CMakeFiles/programmaesame.dir/build.make CMakeFiles/programmaesame.dir/Character.cpp.i
+	$(MAKE) -f CMakeFiles/programmaesame1.dir/build.make CMakeFiles/programmaesame1.dir/Character.cpp.i
 .PHONY : Character.cpp.i
 
 Character.s: Character.cpp.s
@@ -201,7 +284,7 @@ Character.s: Character.cpp.s
 
 # target to generate assembly for a file
 Character.cpp.s:
-	$(MAKE) -f CMakeFiles/programmaesame.dir/build.make CMakeFiles/programmaesame.dir/Character.cpp.s
+	$(MAKE) -f CMakeFiles/programmaesame1.dir/build.make CMakeFiles/programmaesame1.dir/Character.cpp.s
 .PHONY : Character.cpp.s
 
 Enemy.o: Enemy.cpp.o
@@ -210,7 +293,7 @@ Enemy.o: Enemy.cpp.o
 
 # target to build an object file
 Enemy.cpp.o:
-	$(MAKE) -f CMakeFiles/programmaesame.dir/build.make CMakeFiles/programmaesame.dir/Enemy.cpp.o
+	$(MAKE) -f CMakeFiles/programmaesame1.dir/build.make CMakeFiles/programmaesame1.dir/Enemy.cpp.o
 .PHONY : Enemy.cpp.o
 
 Enemy.i: Enemy.cpp.i
@@ -219,7 +302,7 @@ Enemy.i: Enemy.cpp.i
 
 # target to preprocess a source file
 Enemy.cpp.i:
-	$(MAKE) -f CMakeFiles/programmaesame.dir/build.make CMakeFiles/programmaesame.dir/Enemy.cpp.i
+	$(MAKE) -f CMakeFiles/programmaesame1.dir/build.make CMakeFiles/programmaesame1.dir/Enemy.cpp.i
 .PHONY : Enemy.cpp.i
 
 Enemy.s: Enemy.cpp.s
@@ -228,7 +311,7 @@ Enemy.s: Enemy.cpp.s
 
 # target to generate assembly for a file
 Enemy.cpp.s:
-	$(MAKE) -f CMakeFiles/programmaesame.dir/build.make CMakeFiles/programmaesame.dir/Enemy.cpp.s
+	$(MAKE) -f CMakeFiles/programmaesame1.dir/build.make CMakeFiles/programmaesame1.dir/Enemy.cpp.s
 .PHONY : Enemy.cpp.s
 
 Item.o: Item.cpp.o
@@ -237,7 +320,7 @@ Item.o: Item.cpp.o
 
 # target to build an object file
 Item.cpp.o:
-	$(MAKE) -f CMakeFiles/programmaesame.dir/build.make CMakeFiles/programmaesame.dir/Item.cpp.o
+	$(MAKE) -f CMakeFiles/programmaesame1.dir/build.make CMakeFiles/programmaesame1.dir/Item.cpp.o
 .PHONY : Item.cpp.o
 
 Item.i: Item.cpp.i
@@ -246,7 +329,7 @@ Item.i: Item.cpp.i
 
 # target to preprocess a source file
 Item.cpp.i:
-	$(MAKE) -f CMakeFiles/programmaesame.dir/build.make CMakeFiles/programmaesame.dir/Item.cpp.i
+	$(MAKE) -f CMakeFiles/programmaesame1.dir/build.make CMakeFiles/programmaesame1.dir/Item.cpp.i
 .PHONY : Item.cpp.i
 
 Item.s: Item.cpp.s
@@ -255,7 +338,7 @@ Item.s: Item.cpp.s
 
 # target to generate assembly for a file
 Item.cpp.s:
-	$(MAKE) -f CMakeFiles/programmaesame.dir/build.make CMakeFiles/programmaesame.dir/Item.cpp.s
+	$(MAKE) -f CMakeFiles/programmaesame1.dir/build.make CMakeFiles/programmaesame1.dir/Item.cpp.s
 .PHONY : Item.cpp.s
 
 Player.o: Player.cpp.o
@@ -264,7 +347,7 @@ Player.o: Player.cpp.o
 
 # target to build an object file
 Player.cpp.o:
-	$(MAKE) -f CMakeFiles/programmaesame.dir/build.make CMakeFiles/programmaesame.dir/Player.cpp.o
+	$(MAKE) -f CMakeFiles/programmaesame1.dir/build.make CMakeFiles/programmaesame1.dir/Player.cpp.o
 .PHONY : Player.cpp.o
 
 Player.i: Player.cpp.i
@@ -273,7 +356,7 @@ Player.i: Player.cpp.i
 
 # target to preprocess a source file
 Player.cpp.i:
-	$(MAKE) -f CMakeFiles/programmaesame.dir/build.make CMakeFiles/programmaesame.dir/Player.cpp.i
+	$(MAKE) -f CMakeFiles/programmaesame1.dir/build.make CMakeFiles/programmaesame1.dir/Player.cpp.i
 .PHONY : Player.cpp.i
 
 Player.s: Player.cpp.s
@@ -282,7 +365,7 @@ Player.s: Player.cpp.s
 
 # target to generate assembly for a file
 Player.cpp.s:
-	$(MAKE) -f CMakeFiles/programmaesame.dir/build.make CMakeFiles/programmaesame.dir/Player.cpp.s
+	$(MAKE) -f CMakeFiles/programmaesame1.dir/build.make CMakeFiles/programmaesame1.dir/Player.cpp.s
 .PHONY : Player.cpp.s
 
 main.o: main.cpp.o
@@ -291,7 +374,7 @@ main.o: main.cpp.o
 
 # target to build an object file
 main.cpp.o:
-	$(MAKE) -f CMakeFiles/programmaesame.dir/build.make CMakeFiles/programmaesame.dir/main.cpp.o
+	$(MAKE) -f CMakeFiles/programmaesame1.dir/build.make CMakeFiles/programmaesame1.dir/main.cpp.o
 .PHONY : main.cpp.o
 
 main.i: main.cpp.i
@@ -300,7 +383,7 @@ main.i: main.cpp.i
 
 # target to preprocess a source file
 main.cpp.i:
-	$(MAKE) -f CMakeFiles/programmaesame.dir/build.make CMakeFiles/programmaesame.dir/main.cpp.i
+	$(MAKE) -f CMakeFiles/programmaesame1.dir/build.make CMakeFiles/programmaesame1.dir/main.cpp.i
 .PHONY : main.cpp.i
 
 main.s: main.cpp.s
@@ -309,7 +392,7 @@ main.s: main.cpp.s
 
 # target to generate assembly for a file
 main.cpp.s:
-	$(MAKE) -f CMakeFiles/programmaesame.dir/build.make CMakeFiles/programmaesame.dir/main.cpp.s
+	$(MAKE) -f CMakeFiles/programmaesame1.dir/build.make CMakeFiles/programmaesame1.dir/main.cpp.s
 .PHONY : main.cpp.s
 
 # Help Target
@@ -320,7 +403,14 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... programmaesame"
+	@echo "... list_install_components"
+	@echo "... install"
+	@echo "... install/local"
+	@echo "... install/strip"
+	@echo "... programmaesame1"
+	@echo "... runAllTests"
+	@echo "... gtest_main"
+	@echo "... gtest"
 	@echo "... Block.o"
 	@echo "... Block.i"
 	@echo "... Block.s"
