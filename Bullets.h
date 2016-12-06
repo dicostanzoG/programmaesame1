@@ -1,16 +1,12 @@
-//
-// Created by noble on 29/11/2016.
-//
-
 #ifndef PROGRAMMAESAME_BULLETS_H
 #define PROGRAMMAESAME_BULLETS_H
 
 #include "Character.h"
-#include <SFML/Graphics.hpp>
 
 class Bullets {
 public:
 
+    Bullets(int dir=0, int x=0, int y=0): direction_b(dir), x_bullet(x), y_bullet(y) {}
     void setXpos(float x_bullet){
         Bullets :: x_bullet = x_bullet;
     }
@@ -33,7 +29,6 @@ public:
 
     float getYpos(){
         return y_bullet;
-
     }
 
 

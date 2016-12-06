@@ -1,7 +1,3 @@
-//
-// Created by noble on 29/11/2016.
-//
-#include <SFML/Graphics.hpp>
 #include <iostream>
 #ifndef PROGRAMMAESAME_CHARACTER_H
 #define PROGRAMMAESAME_CHARACTER_H

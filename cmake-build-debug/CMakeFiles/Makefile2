@@ -54,45 +54,82 @@ RM = /home/giulia/clion-2016.3/bin/cmake/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/giulia/Scrivania/programmaesame1
+CMAKE_SOURCE_DIR = /home/giulia/Scrivania/ProgettoProgrammazione
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/giulia/Scrivania/programmaesame1/cmake-build-debug
+CMAKE_BINARY_DIR = /home/giulia/Scrivania/ProgettoProgrammazione/cmake-build-debug
 
 #=============================================================================
-# Target rules for target CMakeFiles/programmaesame1.dir
+# Target rules for target CMakeFiles/core.dir
 
 # All Build rule for target.
-CMakeFiles/programmaesame1.dir/all:
-	$(MAKE) -f CMakeFiles/programmaesame1.dir/build.make CMakeFiles/programmaesame1.dir/depend
-	$(MAKE) -f CMakeFiles/programmaesame1.dir/build.make CMakeFiles/programmaesame1.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/giulia/Scrivania/programmaesame1/cmake-build-debug/CMakeFiles --progress-num=5,6,7,8,9,10,11,12 "Built target programmaesame1"
-.PHONY : CMakeFiles/programmaesame1.dir/all
+CMakeFiles/core.dir/all:
+	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/depend
+	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/giulia/Scrivania/ProgettoProgrammazione/cmake-build-debug/CMakeFiles --progress-num=3,4,5,6,7,8,9,10 "Built target core"
+.PHONY : CMakeFiles/core.dir/all
 
 # Include target in all.
-all: CMakeFiles/programmaesame1.dir/all
+all: CMakeFiles/core.dir/all
 
 .PHONY : all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/programmaesame1.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/giulia/Scrivania/programmaesame1/cmake-build-debug/CMakeFiles 8
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/programmaesame1.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/giulia/Scrivania/programmaesame1/cmake-build-debug/CMakeFiles 0
-.PHONY : CMakeFiles/programmaesame1.dir/rule
+CMakeFiles/core.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/giulia/Scrivania/ProgettoProgrammazione/cmake-build-debug/CMakeFiles 8
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/core.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/giulia/Scrivania/ProgettoProgrammazione/cmake-build-debug/CMakeFiles 0
+.PHONY : CMakeFiles/core.dir/rule
 
 # Convenience name for target.
-programmaesame1: CMakeFiles/programmaesame1.dir/rule
+core: CMakeFiles/core.dir/rule
 
-.PHONY : programmaesame1
-
-# clean rule for target.
-CMakeFiles/programmaesame1.dir/clean:
-	$(MAKE) -f CMakeFiles/programmaesame1.dir/build.make CMakeFiles/programmaesame1.dir/clean
-.PHONY : CMakeFiles/programmaesame1.dir/clean
+.PHONY : core
 
 # clean rule for target.
-clean: CMakeFiles/programmaesame1.dir/clean
+CMakeFiles/core.dir/clean:
+	$(MAKE) -f CMakeFiles/core.dir/build.make CMakeFiles/core.dir/clean
+.PHONY : CMakeFiles/core.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/core.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/Game.dir
+
+# All Build rule for target.
+CMakeFiles/Game.dir/all: CMakeFiles/core.dir/all
+	$(MAKE) -f CMakeFiles/Game.dir/build.make CMakeFiles/Game.dir/depend
+	$(MAKE) -f CMakeFiles/Game.dir/build.make CMakeFiles/Game.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/giulia/Scrivania/ProgettoProgrammazione/cmake-build-debug/CMakeFiles --progress-num=1,2 "Built target Game"
+.PHONY : CMakeFiles/Game.dir/all
+
+# Include target in all.
+all: CMakeFiles/Game.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/Game.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/giulia/Scrivania/ProgettoProgrammazione/cmake-build-debug/CMakeFiles 10
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/Game.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/giulia/Scrivania/ProgettoProgrammazione/cmake-build-debug/CMakeFiles 0
+.PHONY : CMakeFiles/Game.dir/rule
+
+# Convenience name for target.
+Game: CMakeFiles/Game.dir/rule
+
+.PHONY : Game
+
+# clean rule for target.
+CMakeFiles/Game.dir/clean:
+	$(MAKE) -f CMakeFiles/Game.dir/build.make CMakeFiles/Game.dir/clean
+.PHONY : CMakeFiles/Game.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/Game.dir/clean
 
 .PHONY : clean
 
@@ -120,11 +157,12 @@ test/preinstall: test/lib/googletest/preinstall
 # Target rules for target test/CMakeFiles/runAllTests.dir
 
 # All Build rule for target.
+test/CMakeFiles/runAllTests.dir/all: CMakeFiles/core.dir/all
 test/CMakeFiles/runAllTests.dir/all: test/lib/googletest/CMakeFiles/gtest_main.dir/all
 test/CMakeFiles/runAllTests.dir/all: test/lib/googletest/CMakeFiles/gtest.dir/all
 	$(MAKE) -f test/CMakeFiles/runAllTests.dir/build.make test/CMakeFiles/runAllTests.dir/depend
 	$(MAKE) -f test/CMakeFiles/runAllTests.dir/build.make test/CMakeFiles/runAllTests.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/giulia/Scrivania/programmaesame1/cmake-build-debug/CMakeFiles --progress-num=13,14,15 "Built target runAllTests"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/giulia/Scrivania/ProgettoProgrammazione/cmake-build-debug/CMakeFiles --progress-num=15,16,17,18 "Built target runAllTests"
 .PHONY : test/CMakeFiles/runAllTests.dir/all
 
 # Include target in all.
@@ -134,9 +172,9 @@ all: test/CMakeFiles/runAllTests.dir/all
 
 # Build rule for subdir invocation for target.
 test/CMakeFiles/runAllTests.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/giulia/Scrivania/programmaesame1/cmake-build-debug/CMakeFiles 7
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/giulia/Scrivania/ProgettoProgrammazione/cmake-build-debug/CMakeFiles 16
 	$(MAKE) -f CMakeFiles/Makefile2 test/CMakeFiles/runAllTests.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/giulia/Scrivania/programmaesame1/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/giulia/Scrivania/ProgettoProgrammazione/cmake-build-debug/CMakeFiles 0
 .PHONY : test/CMakeFiles/runAllTests.dir/rule
 
 # Convenience name for target.
@@ -181,7 +219,7 @@ test/lib/googletest/preinstall:
 test/lib/googletest/CMakeFiles/gtest_main.dir/all: test/lib/googletest/CMakeFiles/gtest.dir/all
 	$(MAKE) -f test/lib/googletest/CMakeFiles/gtest_main.dir/build.make test/lib/googletest/CMakeFiles/gtest_main.dir/depend
 	$(MAKE) -f test/lib/googletest/CMakeFiles/gtest_main.dir/build.make test/lib/googletest/CMakeFiles/gtest_main.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/giulia/Scrivania/programmaesame1/cmake-build-debug/CMakeFiles --progress-num=3,4 "Built target gtest_main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/giulia/Scrivania/ProgettoProgrammazione/cmake-build-debug/CMakeFiles --progress-num=13,14 "Built target gtest_main"
 .PHONY : test/lib/googletest/CMakeFiles/gtest_main.dir/all
 
 # Include target in all.
@@ -191,9 +229,9 @@ all: test/lib/googletest/CMakeFiles/gtest_main.dir/all
 
 # Build rule for subdir invocation for target.
 test/lib/googletest/CMakeFiles/gtest_main.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/giulia/Scrivania/programmaesame1/cmake-build-debug/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/giulia/Scrivania/ProgettoProgrammazione/cmake-build-debug/CMakeFiles 4
 	$(MAKE) -f CMakeFiles/Makefile2 test/lib/googletest/CMakeFiles/gtest_main.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/giulia/Scrivania/programmaesame1/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/giulia/Scrivania/ProgettoProgrammazione/cmake-build-debug/CMakeFiles 0
 .PHONY : test/lib/googletest/CMakeFiles/gtest_main.dir/rule
 
 # Convenience name for target.
@@ -218,7 +256,7 @@ clean: test/lib/googletest/CMakeFiles/gtest_main.dir/clean
 test/lib/googletest/CMakeFiles/gtest.dir/all:
 	$(MAKE) -f test/lib/googletest/CMakeFiles/gtest.dir/build.make test/lib/googletest/CMakeFiles/gtest.dir/depend
 	$(MAKE) -f test/lib/googletest/CMakeFiles/gtest.dir/build.make test/lib/googletest/CMakeFiles/gtest.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/giulia/Scrivania/programmaesame1/cmake-build-debug/CMakeFiles --progress-num=1,2 "Built target gtest"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/giulia/Scrivania/ProgettoProgrammazione/cmake-build-debug/CMakeFiles --progress-num=11,12 "Built target gtest"
 .PHONY : test/lib/googletest/CMakeFiles/gtest.dir/all
 
 # Include target in all.
@@ -228,9 +266,9 @@ all: test/lib/googletest/CMakeFiles/gtest.dir/all
 
 # Build rule for subdir invocation for target.
 test/lib/googletest/CMakeFiles/gtest.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/giulia/Scrivania/programmaesame1/cmake-build-debug/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/giulia/Scrivania/ProgettoProgrammazione/cmake-build-debug/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 test/lib/googletest/CMakeFiles/gtest.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/giulia/Scrivania/programmaesame1/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/giulia/Scrivania/ProgettoProgrammazione/cmake-build-debug/CMakeFiles 0
 .PHONY : test/lib/googletest/CMakeFiles/gtest.dir/rule
 
 # Convenience name for target.

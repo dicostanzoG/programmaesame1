@@ -5,13 +5,12 @@
 #include "Item.h"
 #include "Bullets.h"
 
-
 class Player : public Character {
 
 public:
 
-    Player(float x, float y, float speed, int size, bool invincible, bool fire, bool bullet):
-            Character(x, y, speed), invincible(invincible), fire(fire), bullet(bullet) {
+    Player(float x, float y, float speed, int Psize, bool invincible, bool fire, bool bullet):
+            Character(x, y, speed), size(Psize), invincible(invincible), fire(fire), bullet(bullet) {
     }
 
     virtual ~Player() {};
