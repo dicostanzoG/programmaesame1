@@ -2,40 +2,20 @@
 #define PROGRAMMAESAME_BULLETS_H
 
 #include "Character.h"
-
-class Bullets {
+#include "Graphic.h"
+//FireBall
+class Bullets : public Graphic {
 public:
+    int direction;
 
-    Bullets(int dir=0, int x=0, int y=0): direction_b(dir), x_bullet(x), y_bullet(y) {}
-    void setXpos(float x_bullet){
-        Bullets :: x_bullet = x_bullet;
-    }
+    Bullets ();
 
-    int getDirection_b() const {
-        return direction_b;
-    }
-
-    void setDirection_b(int direction_b) {
-        Bullets::direction_b = direction_b;
-    }
-
-    float getXpos(){
-        return x_bullet;
-    }
-
-    void setYpos(float y_bullet){
-        Bullets :: y_bullet = y_bullet;
-    }
-
-    float getYpos(){
-        return y_bullet;
-    }
-
+    void update();
 
 private:
-    int direction_b;
-    float x_bullet;
-    float y_bullet;
+
+    int movementSpeed = 3;
+
 
 };
 

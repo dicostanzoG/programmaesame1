@@ -2,13 +2,29 @@
 #define PROGRAMMAESAME_BLOCK_H
 
 #include "Item.h"
+#include "Graphic.h"
 
-class Block {
+class Block: public Graphic {
 
 public:
-    Block (float x=0, float y=0, bool destr=false, bool empty=false):
-                 x_block(x), y_block(y),  destroyed(destr), empty(empty) {}
-    ~Block(){}
+    Block(){
+        rect.setPosition(10, 10);
+        rect.setSize(sf::Vector2f(50, 28));
+        rect.setFillColor(sf::Color::Magenta);
+
+    }
+
+
+
+
+
+
+
+    /*  Block (float x=0, float y=0, bool destr=false, bool empty=false):
+                 x_block(x), y_block(y),  destroyed(destr), empty(empty) {
+
+    }
+*/
 
     bool DropItem(bool empty){
         Block::empty = empty;

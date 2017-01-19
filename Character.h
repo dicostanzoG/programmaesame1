@@ -1,4 +1,5 @@
 #include <iostream>
+#include <SFML/Graphics.hpp>
 #ifndef PROGRAMMAESAME_CHARACTER_H
 #define PROGRAMMAESAME_CHARACTER_H
 
@@ -6,9 +7,13 @@
 class Character {
 
 public:
-    Character(float x, float y, float speed);
+    int direction;
+    int counterWalking = 0;
+    int counter = 0;
+    const int groundHeight = 350;//Gravity
+    const float gravitySpeed = 5;//Gravity
 
-    virtual void move(float x, float y);
+    Character(float x, float y, float speed);
 
     virtual ~Character();
 
@@ -50,7 +55,7 @@ protected:
     float speed;
     float x;
     float y;
-    int direction;
+
 };
 
 

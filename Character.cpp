@@ -7,9 +7,6 @@ Character::~Character() {
     // TODO aggiungere collisione
 }
 
-void Character::move(float x, float y) {
-    //TODO
-}
 
 
 
